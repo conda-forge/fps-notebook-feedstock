@@ -1,5 +1,5 @@
 {% set name = "fps-notebook" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fps_notebook-{{ version }}.tar.gz
-  sha256: 600d7fb32c4488d201a37af209dad124f0b7f0210f076ba9d60e37009718c35b
+  sha256: 1c41153d82f0cb43d8bbb72ee4d517b97875b99a0ae3bf1f2521a8f4552e4ad7
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - jupyverse-api >=0.8.0,<0.9.0
+    - jupyverse-api >=0.9.0,<0.10.0
     - notebook-frontend >=7.4.2,<8.0.0
 
 test:
