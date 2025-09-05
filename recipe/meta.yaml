@@ -21,12 +21,15 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - jupyverse-api >=0.11.0,<0.12.0
+    - jupyverse-api >=0.12.0,<0.13.0
     - notebook-frontend >=7.4.2,<8.0.0
 
 test:
   requires:
     - python {{ python_min }}
+    - pip
+  commands:
+    - pip check
   imports:
     - fps_notebook
 
