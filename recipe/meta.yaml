@@ -1,5 +1,5 @@
 {% set name = "fps-notebook" %}
-{% set version = "0.9.4" %}
+{% set version = "0.9.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fps_notebook-{{ version }}.tar.gz
-  sha256: 8d3805962cc6ea73882be1197412d12f88321fc32cdab9d4963e3c59017c4e5b
+  sha256: 847a48f1023ba0ecd668494dba1a3163ba6a15283e12f83b984f4ab6b99a433a
 
 build:
   noarch: python
