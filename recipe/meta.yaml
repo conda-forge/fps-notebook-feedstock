@@ -1,5 +1,5 @@
 {% set name = "fps-notebook" %}
-{% set version = "0.9.4" %}
+{% set version = "0.9.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fps_notebook-{{ version }}.tar.gz
-  sha256: 8d3805962cc6ea73882be1197412d12f88321fc32cdab9d4963e3c59017c4e5b
+  sha256: 2c33a360ceacdabd135fbe19587b2bfacb4709f6c1b83fe02cf149bab607bcd6
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - uv-build
   run:
     - python >={{ python_min }}
-    - jupyverse-api >=0.12.0,<0.13.0
+    - jupyverse-api >=0.12.6,<0.13.0
     - notebook-frontend >=7.4.2,<8.0.0
 
 test:
