@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.9.10"
+  version: "0.10.2"
 
 package:
   name: fps-notebook
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/f/fps-notebook/fps_notebook-${{ version }}.tar.gz
-    sha256: 204ee421335317ccb02490d33a740c7d05b5e48ae5b83a40e28339171e717c70
+    sha256: 6113516aacb64b16596ef362e1553cda048544e1da69f2fd807b7559d88aa02b
 
 build:
   noarch: python
