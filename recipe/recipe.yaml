@@ -24,8 +24,16 @@ requirements:
     - uv-build
   run:
     - python >=${{ python_min }}
-    - jupyverse-api >=0.14.0,<0.15.0
+    - fastapi-core
+    - fps
+    - jupyverse-api >=0.15.0,<0.16.0
+    - jupyverse-auth >=0.2.0,<0.3.0
+    - jupyverse-frontend >=0.1.0,<0.2.0
+    - jupyverse-jupyterlab >=0.1.0,<0.2.0
+    - jupyverse-lab >=0.3.0,<0.4.0
+    - jupyverse-notebook >=0.1.1,<0.2.0
     - notebook-frontend >=7.4.2,<8.0.0
+    - structlog
 
 tests:
   - python:
