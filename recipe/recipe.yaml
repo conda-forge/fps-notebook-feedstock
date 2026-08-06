@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.10.4"
+  version: "0.10.5"
 
 package:
   name: fps-notebook
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/f/fps-notebook/fps_notebook-${{ version }}.tar.gz
-    sha256: 83dc20a2c69a0b3f58bb42b3c694275466d61cddfbb1c9f8d75602c92dedfe9b
+    sha256: 12d7e93de19eccde6cc791bfc2c756d4cb4eee05073dec10460d586efd974ff1
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - uv-build
+    - uv-build >=0.11.32,<0.12
   run:
     - python >=${{ python_min }}
     - fastapi-core
@@ -30,7 +30,7 @@ requirements:
     - jupyverse-auth >=0.2.0,<0.3.0
     - jupyverse-frontend >=0.1.0,<0.2.0
     - jupyverse-jupyterlab >=0.1.0,<0.2.0
-    - jupyverse-lab >=0.3.0,<0.4.0
+    - jupyverse-lab >=0.3.1,<0.4.0
     - jupyverse-notebook >=0.1.1,<0.2.0
     - notebook-frontend >=7.4.2,<8.0.0
     - structlog
@@ -39,7 +39,9 @@ tests:
   - python:
       imports: fps_notebook
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   license: BSD-3-Clause
